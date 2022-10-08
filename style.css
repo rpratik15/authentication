@@ -1,0 +1,41 @@
+
+
+.title
+{
+    
+   margin: auto;
+    width: 100%;
+}
+
+.signup
+{
+    width: 800px;
+    margin: auto;
+}
+.col-12
+{
+    text-align: center;
+    padding: 10px;
+}
+
+.login
+{
+    width: 800px;
+    margin: auto;
+    height: auto;
+ 
+}
+.login .col-md-6
+{
+    margin: auto;
+}
+#signup,#login
+{
+    display: none;
+}
+
+#tagline
+{
+    text-align: center;
+    color: blue;
+}

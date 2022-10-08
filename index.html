@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Athentication</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="title" id="nav">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+         
+          <a class="navbar-brand" href="#" >
+            <img src="./images/EiL.ico"  alt="pic">
+            Electronica India Ltd</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" onclick="GotoHome()">Home</a>
+              </li>
+
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#" onclick="GotoSignup()">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#" onclick="GotoLogin()">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- home -->
+    <div class="container" id="home">
+      <h1 style="text-align: center;">Electronica India Ltd</h1>
+      <h4 id="tagline">India's leading manufacturer of EDM and Wire EDM</h4>
+      <img src="./images/new-banner-1.jpg" style="width: 100%;" alt="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maiores voluptatem illo perspiciatis, sint hic in quos tempore possimus ducimus consequuntur magnam mollitia exercitationem culpa corporis facere pariatur sapiente nam rerum a nemo? Harum quas nam numquam dicta illum nesciunt quo fuga officiis unde. Quidem repudiandae rerum maiores similique aspernatur quaerat dolore praesentium voluptate magni deleniti debitis quam, ratione nihil delectus necessitatibus id. Necessitatibus suscipit odio ullam recusandae in rerum, iusto eos consequatur quam, eveniet ipsa nisi natus quos ipsum, ut distinctio harum fuga neque veniam perspiciatis quibusdam quia. Laudantium optio ullam architecto iure error, quae repellat amet mollitia eaque!
+      <hr>
+      <p class="lead">
+      <b>Company Profile</b>
+
+<br>
+<li>We are in the business of Manufacturing and Distribution of high-tech innovative engineering  products</li>
+<li>We are ready to take international business challenges.</li>
+<li> corporate philosophy is growth through quality and productivity</li>
+<li>To achieve this, we will build an organization where every employee should have job satisfaction and pride in his work,
+To foster a work environment in which all employees can grow to their highest potential and become building blocks for the organization.
+</li>
+<li>Supplier as well as customers will be treated as part of our family.</li>
+</p>
+    </div>
+    <!-- Sign up -->
+    <div class="signup" id="signup">
+      <h2 style="text-align:center">Sign Up</h2>
+    <form class="row g-3" id="signup-form">
+        <div class="col-md-6">
+          <label for="firstname" class="form-label">First name</label>
+          <input type="text" class="form-control" id="firstname"  required onblur="signup('first_name')">
+          <div class="valid-feedback" id="first-valid">
+            Looks good!
+          </div>
+          <div class="invalid-feedback" id="first-invalid" >
+            Please enter valid first name
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="lastname" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="lastname"  required onblur="signup('last_name')">
+          <div class="valid-feedback" id="last-valid">
+            Looks good!
+          </div> 
+          <div class="invalid-feedback" id="last-invalid">
+            Please enter valid last name
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="emil" class="form-label">Email</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend" required onblur="signup('email')">
+            <div class="valid-feedback" id="email-valid">
+                Looks good!
+              </div>
+            <div class="invalid-feedback" id="email-invalid">
+              Please enter valid email id.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required onblur="signup('password')">
+          <div class="valid-feedback" id="password-valid">
+            Looks good!
+          </div>
+          <div class="invalid-feedback" id="password-invalid">
+            Password should be atleast 8 charcters.
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <label for="confirmpassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmpassword" required onblur="signup('confirmpassword')">
+         
+          <div class="invalid-feedback" id="confirmpassword-invalid">
+            Passord and confirm password is not same!
+          </div>
+        </div>
+       
+        <div class="col-12">
+          <button class="btn btn-primary" type="button" onclick="signup('all')">Submit</button>
+        </div>
+      </form>
+    </div>
+    <!-- login -->
+    <div class="login" id="login">
+      <h2 style="text-align:center">Login</h2>
+      <form id="login-form">
+      <div class="col-md-6">
+        <label for="loginemail" class="form-label">Email</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" class="form-control" id="loginemail" aria-describedby="inputGroupPrepend" required onblur="login('email')">
+          <div class="valid-feedback" id="loginemail-valid">
+              Looks good!
+            </div>
+          <div class="invalid-feedback" id="loginemail-invalid">
+            Please enter valid email id.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="loginpassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="loginpassword" required onblur="login('password')">
+        <div class="valid-feedback" id="loginpassword-valid">
+          Looks good!
+        </div>
+        <div class="invalid-feedback" id="loginpassword-invalid">
+          Password should be atleast 8 charcters.
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="button" onclick="login('all')">Login</button>
+      </div>
+    </form>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
